@@ -11,7 +11,7 @@ const searchBooks=()=>{
     searchFild.value=''
      
        document.getElementById("error-message").innerText="";
-      const url=`http://openlibrary.org/search.json?q=${searchText}`
+      const url=`https://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
     .then(res=>res.json())
     
@@ -34,7 +34,7 @@ const displaySearch =books=>{
       
         const div=document.createElement('div')
         div.classList.add("col-md-3")
-        const imgUrl=`http://covers.openlibrary.org/b/id/${book.cover_i?book.cover_i:''}-M.jpg`
+        const imgUrl=`https://covers.openlibrary.org/b/id/${book.cover_i?book.cover_i:''}-M.jpg`
         div.innerHTML=`
         <div class="shadow rounded p-2 m-2 " style="width: 16rem; height:30rem;">
         <img class="img-fluid mx-4" src="${imgUrl}">
